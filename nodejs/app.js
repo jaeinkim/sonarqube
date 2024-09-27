@@ -3,10 +3,10 @@ const app = express();
 app.disable("x-powered-by");
 const port = 3000;
 
-app.get('/', (req, res) => {
-  let a = 1;
-  let b = 2;
-  let c = 1 + 2;
+app.get('/', (_req, res) => {
+  const a = 1;
+  const b = 2;
+  const c = 1 + 2;
   if ( a == b ) {
     console.log('a equals b')
   }
