@@ -7,10 +7,10 @@ app.get('/', (_req, res) => {
   const a = 1;
   const b = 2;
   const c = 1 + 2;
-  if ( a == b ) {
+  if ( a == b ) {  // Use === for strict equality comparison
     console.log('a equals b')
   }
-  console.log('1+2='+c);
+  console.log('1+2='+c);  // Consider using template literals
 
   hello1('hello', 'world');
   hello2('my', 'world');
@@ -18,8 +18,8 @@ app.get('/', (_req, res) => {
   res.send('Hello World!');
 });
 
-// Unused variable
-let unusedVariable = 42; // This variable is never used
+// Remove unused variable
+// let unusedVariable = 42;
 
 let server;
 
@@ -28,19 +28,20 @@ const hello1 = (a, b) => {
   return a + b;
 }
 
-// Unused function
-const hello3 = (x) => {
-  return x * 2; // This function is never called
-}
+// Remove unused function
+// const hello3 = (x) => {
+//   return x * 2;
+// }
 
 const hello2 = (a, b) => {
   console.log('hello2', a, b);
   return a + b;
 }
 
-// Potential bug: using a magic number
+// Use a named constant for PI
+const PI = Math.PI;
 function calculateArea(radius) {
-  return Math.PI * radius * radius; // Magic number PI
+  return PI * radius * radius;
 }
 
 function startServer() {
