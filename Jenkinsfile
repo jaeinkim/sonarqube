@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        SONAR_PROJECT_KEY = 'jaein_jenkins'
+        SONAR_PROJECT_KEY = 'test_jenkins'
         PATH = "${tool 'NodeJS'}/bin:${tool 'SonarScanner'}/bin:${env.PATH}"
     }
 
